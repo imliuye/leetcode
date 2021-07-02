@@ -3,7 +3,7 @@
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
-
+from linkedList import ListNode
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         first = (l1.val + l2.val) % 10
@@ -29,3 +29,15 @@ class Solution:
             l2 = None if l2==None else l2.next
             
         return head
+
+l1 = ListNode(2)
+l1.append([4,3])
+l1.printLL();
+l2 = ListNode(5)
+l2.append([6,4])
+l2.printLL();
+
+s = Solution()
+
+r = s.addTwoNumbers(l1,l2)
+r.printLL()
